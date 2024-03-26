@@ -8,3 +8,10 @@
     height: 100%;
   }
 }
+.nested-class-parent {
+  color: black;
+
+  .child-class {
+    font-size: 12px;
+  }
+}

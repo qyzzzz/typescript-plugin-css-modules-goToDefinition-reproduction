@@ -4,8 +4,9 @@
       {
         "name": "typescript-plugin-css-modules",
         "options": {
-          "goToDefinition": true
-          // "customRenderer": "./customRenderer.js"
+          "goToDefinition": true,
+          "allowUnknownClassnames": true,
+          "namedExports": true
         }
       }
     ],

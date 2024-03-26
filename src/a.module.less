@@ -1,10 +1,38 @@
-.RootClass {
-  height: 100%;
-  .class-a {
-    height: 100%;
-  }
+.nested-class-parent {
+  color: black;
 
-  .class__b {
-    height: 100%;
+  .child-class {
+    font-size: 12px;
   }
+}
+
+.test-class {
+  font-size: 14px;
+}
+
+@selectors: blue, green, red;
+
+each(@selectors, {
+  .selectorA@{value} {
+    color: b;
+  }
+});
+
+each(range(4), {
+  .column-@{value} {
+    height: (@value * 50px);
+  }
+})
+
+/* prettier-ignore */
+.color-set () {
+  one: blue;
+  two: green;
+  three: red;
+}
+
+.color-set {
+  each(.color-set (), .(@v, @k, @i) {
+    @{k}-@{i}: @v;
+  });
 }
